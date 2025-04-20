@@ -3,15 +3,10 @@ pipeline {
 
     stages {
         stage('Checkout') {
-    stage('Checkout') {
-    steps {
-        git credentialsId: 'ssh_key_for_git', url: 'git@github.com:kain3x6/html-page.git'
-    }
-}
-
-    }
-}
-
+            steps {
+                git credentialsId: 'ssh_key_for_git', url: 'git@github.com:kain3x6/html-page.git'
+            }
+        }
 
         stage('Build') {
             steps {
