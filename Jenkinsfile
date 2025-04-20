@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'ssh_key_for_git', url: 'git@github.com:kain3x6/html-page.git'
+                git branch: 'main', credentialsId: 'ssh_key_for_git', url: 'git@github.com:kain3x6/html-page.git'
             }
         }
 
