@@ -3,11 +3,12 @@ pipeline {
 
     stages {
         stage('Checkout') {
+    stage('Checkout') {
     steps {
-        sshagent(['ssh_key_for_git']) {
-            sh 'GIT_SSH_COMMAND="ssh -v" git ls-remote git@github.com:kain3x6/html-page.git'
-            git 'git@github.com:kain3x6/html-page.git'
-        }
+        git credentialsId: 'ssh_key_for_git', url: 'git@github.com:kain3x6/html-page.git'
+    }
+}
+
     }
 }
 
